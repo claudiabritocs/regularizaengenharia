@@ -1,0 +1,172 @@
+.contato
+    +mobile()
+        padding 30px 0
+    .form-wrapper
+        margin-top 40px
+        display flex
+        justify-content space-evenly
+        +below($tablet)
+            display block
+        .contato-whatsapp
+            margin-top 10px
+    .info
+        display block
+        margin-right $rem(60)
+        +below($tablet)
+            margin-bottom 20px
+        a
+            montserrat 20
+            color $azul
+            min-width 200px
+            font-weight 600
+        p   
+            margin-top -5px
+            margin-bottom 60px
+        .contato-telefone
+            montserrat 20
+            color $azul
+            margin 0
+            min-width 200px
+            font-weight 600
+        .contato-endereco
+            montserrat 14!important
+            color $azul
+            margin-top 70px
+            font-weight 600
+            min-width 290px
+            +below(620px)
+                min-width 50px
+     
+    .whatsapp
+        display block
+        font-weight 600
+        width 25px
+        height 25px
+        // text-indent 30px
+        // background $img('ico-whatsapp-vazio.svg') no-repeat center
+        background-size 100%
+        margin-top 6px!important
+        margin-bottom 2px
+        &:hover
+            text-decoration underline
+    .email
+        color red
+        margin-top 10px!important
+    .contato-fale
+        color $laranja
+        montserrat 14
+        font-weight 600
+        margin-bottom 10px
+
+    form
+        width 100%
+        max-width 1060px
+        .flash
+            padding 15px
+            dosis 15
+            color #fff
+            margin-bottom 10px
+            &.flash-error
+                background #e74c3c
+            &.flash-success
+                background #18bc9c
+        .grid
+            display grid
+            grid-template-columns 1fr 1fr 50px
+            grid-template-rows 130px
+            grid-gap 5px
+            margin-right 50px
+            position relative
+            &:before
+                content ''
+                position absolute
+                left -20px
+                top -35px
+                height 170px
+                width 2px
+                background rgba($laranja)
+                transition .2s ease
+            +mobile()
+                grid-template-columns 1fr
+                textarea
+                    height 130px
+                button
+                    height 40px
+            input
+            textarea
+                width 100%
+                display block
+                background $bg2
+                montserrat 16
+                color $azul
+                font-weight 600
+                border 0
+                border-radius 4px
+                outline 0
+                padding 10px
+                resize none
+                &::placeholder
+                    color $cinza
+                + input
+                    margin-top 5px
+            input
+                height 40px
+            button
+                // background $bg
+                outline 0
+                border 0
+                cursor pointer
+                transition background .3s
+                position relative
+                width 75px
+                border-radius 4px
+                &:after
+                    content ''
+                    position absolute
+                    left 50%
+                    top 50%
+                    width 13px
+                    height 13px
+                    border-left 2px solid $laranja
+                    border-bottom 2px solid $laranja
+                    transform-origin center
+                    transform translate(-80%, -50%) rotate(-135deg)
+                &:hover
+                    background rgba($cinza, .25)
+    .img-wrapper
+        width 100%
+        margin-top $rem(60)
+        position relative
+        img
+            width 100%
+            height 663px
+            object-fit cover
+            max-width 59.38%
+    .mapa
+        margin-top 60px
+        width 120%
+        height 500px
+        iframe
+            width 100%
+            height 100%
+            display block
+            p
+                padding-left 115px
+                padding-top 30px
+                dosis 16
+                color $cinza
+                margin 0
+        +below($tablet)
+            margin-top 30px
+            img
+                width 100%
+                max-width unset
+                height auto
+            .mapa
+                position relative
+                top unset
+                width 100%
+                iframe
+                    height 250px
+                p
+                    padding 25px 0 0

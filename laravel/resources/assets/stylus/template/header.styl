@@ -1,0 +1,175 @@
+header
+    height 150px
+    background #fff
+    .center-header
+        display flex
+        align-items center
+        justify-content right
+        height 100%
+        margin-left 250px
+        margin-right 15%
+        +below(1260px)
+            margin-left 15%
+    .logo
+        width 140px
+        margin-right auto
+        flex-shrink 0
+        img
+            width 100%
+        // &:before
+        //     content ''
+        //     position absolute
+        //     top 0
+        //     left 15px
+        //     height 250px
+        //     width 2px
+        //     background rgba($laranja)
+        //     transition .2s ease
+        //     z-index 4
+    nav#nav-desktop
+        display flex
+        align-items center
+        height 100%
+        +below(1260px)
+            display none
+        a:not(.instagram) 
+            position relative
+            display flex
+            height 100%
+            align-items center
+            montserrat 14
+            color $rosa
+            font-weight 600
+            &:before
+            &:after
+                content ''
+                position absolute
+                left -10px
+                height 24px
+                width 2px
+                background rgba($laranja)
+                transition .2s ease
+            &:hover
+            &.active
+                &:before
+                    top 0
+                    height 65px
+        a + a
+            margin-left $rem(70)
+        a.instagram
+            width 15px
+            height 15px
+            text-indent -9999px
+            background $img('ico-instagram.svg') no-repeat center
+            background-size 100%
+            // &:hover
+            //     background-image $img('ico-instagram-color.svg')
+
+
+    #mobile-toggle
+        display block
+        background-color transparent
+        border 0
+        position relative
+        height 100%
+        width 28px
+        outline 0
+        padding 0
+        cursor pointer
+        margin-left auto
+        +above(1260px)
+            display none
+        .lines
+            display block
+            width 100%
+            height 4px
+            background $azul
+            position relative
+            transition .3s ease
+            border-radius 3px
+            &:before
+            &:after
+                content ""
+                display block
+                position absolute
+                left 0
+                width 100%
+                height 4px
+                background $azul
+                transition .3s ease
+                border-radius 3px
+            &:before
+                top 7px
+            &:after
+                top -7px
+        &.close
+            .lines
+                background transparent
+                &:before
+                &:after
+                    transform-origin 50% 50%
+                    top 0
+                &:before
+                    transform rotate3d(0,0,1,45deg)
+                &:after
+                    transform rotate3d(0,0,1,-45deg)
+    +below(1260px)
+        height 85px
+        .center-header
+            justify-content space-between
+        .logo
+            margin 0
+            width 85px
+
+nav#nav-mobile
+    background #fff
+    box-shadow 0 6px 6px rgba(#000, .1)
+    +above(1260px)
+        display none !important
+    display none
+    padding 10px 0 20px
+    text-align right
+    position relative
+    z-index 2
+    a
+        display block
+        montserrat 14
+        color $azul
+        margin-right 15%
+        &.active
+            padding-right 18px
+            position relative
+            &:after
+                content ''
+                position absolute
+                right 0
+                top 50%
+                width 10px
+                height 1px
+                background rgba($laranja, .4)
+        + a
+            margin-top 10px
+        &.instagram
+            width 15px
+            height 15px
+            text-indent 9999px
+            background $img('ico-instagram.svg') no-repeat center
+            background-size 100%
+            margin-top 16px
+            margin-left auto
+        // &.facebook
+        //     width 15px
+        //     height 15px
+        //     text-indent -9999px
+        //     background $img('ico-facebook-vazio.svg') no-repeat center
+        //     // background-size cover
+        //     margin-top 16px
+        //     margin-left auto
+        // &.whatsapp
+        //     width 15px
+        //     height 15px
+        //     text-indent 9999px
+        //     background $img('ico-whatsapp-vazio.svg') no-repeat center
+        //     background-size 100%
+        //     margin-top 16px
+        //     margin-left auto

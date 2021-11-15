@@ -1,0 +1,42 @@
+<?php
+
+Route::group(['middleware' => ['web']], function () {
+    Route::get('/', 'HomeController@index')->name('home');
+    
+
+    // Painel
+    Route::group([
+        'prefix'     => 'painel',
+        'namespace'  => 'Painel',
+        'middleware' => ['auth']
+    ], function() {
+        Route::get('/', 'PainelController@index')->name('painel');
+
+        /* GENERATED ROUTES */
+		Route::resource('imagens', 'ImagensController');
+		Route::resource('home', 'HomeController', ['only' => ['index', 'update']]);
+		Route::resource('configuracoes', 'ConfiguracoesController', ['only' => ['index', 'update']]);
+
+        Route::get('contato/recebidos/{recebidos}/toggle', ['as' => 'painel.contato.recebidos.toggle', 'uses' => 'ContatosRecebidosController@toggle']);
+        Route::resource('contato/recebidos', 'ContatosRecebidosController');
+        Route::resource('contato', 'ContatoController');
+        Route::resource('usuarios', 'UsuariosController');
+
+        Route::post('ckeditor-upload', 'PainelController@imageUpload');
+        Route::post('order', 'PainelController@order');
+        Route::get('logs', '\Rap2hpoutre\LaravelLogViewer\LogViewerController@index');
+
+        Route::get('generator', 'GeneratorController@index')->name('generator.index');
+        Route::post('generator', 'GeneratorController@submit')->name('generator.submit');
+    });
+
+    // Auth
+    Route::group([
+        'prefix'    => 'painel',
+        'namespace' => 'Auth'
+    ], function() {
+        Route::get('login', 'AuthController@showLoginForm')->name('auth');
+        Route::post('login', 'AuthController@login')->name('login');
+        Route::get('logout', 'AuthController@logout')->name('logout');
+    });
+});

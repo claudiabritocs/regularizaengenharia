@@ -1,0 +1,127 @@
+footer
+    display fixed
+    border-top solid 1px $laranja
+    background-color $bgfooter
+    color $fontfooter
+    z-index 900
+    a:hover
+        text-decoration underline
+    .center
+        padding-top 30px
+        padding-bottom 15px
+        display grid
+        justify-content center
+        grid-template-columns repeat(auto-fill, 400px)
+
+    .center2
+        padding 10px
+        display flex
+        align-items flex-start
+        justify-content center
+
+    .footer-redes
+        display flex
+        min-width 130px
+        margin-bottom 15px
+    .footer_telefone
+        width 15px
+        height 15px
+        text-indent 25px
+        background $img('ico-telefone.svg') no-repeat center
+        background-size 100%
+        white-space nowrap
+    .footer_whatsapp
+        display block
+        width 15px
+        height 15px
+        text-indent 25px
+        background $img('ico-whatsapp.svg') no-repeat center
+        background-size 100%
+        margin-top 4px
+        margin-right 4px
+        white-space nowrap
+    .footer-instagram
+        display block
+        width 15px
+        height 15px
+        text-indent 25px
+        background $img('ico-instagram-branco.svg') no-repeat center
+        background-size 100%
+        margin-top 4px
+        margin-right 4px
+        white-space nowrap
+    .footer-contato
+        montserrat 14
+        color $fontfooter
+        margin-left 20px
+        p
+            margin 0
+    .footer-endereco
+        display flex
+        margin-right auto
+        margin-left auto
+        montserrat 14
+        color $fontfooter
+        line-height 1.5
+        p
+            margin 0
+    .footer-ico-endereco
+        width 20px
+        height 25px
+        margin-right 10px
+    .footer-email
+        display block
+        width 15px
+        height 15px
+        text-indent 30px
+        background $img('ico-email.svg') no-repeat center
+        background-size 100%
+        margin-top 10px
+        white-space nowrap
+    .footer-links
+        margin-top 4px
+        display block
+        // grid-template-columns repeat(3, min-content)
+        // grid-gap $rem(60)
+        montserrat 10
+        color $fontfooter
+        // justify-content center
+        margin-left auto
+        margin-right auto
+        .footer-politica
+            montserrat 12
+        a
+            display block
+            white-space nowrap
+            + a
+                margin-top 1em
+            &.sub
+                font-size $rem(14)
+                margin-top 4px
+    +below(1080px)
+        .footer-links
+            display none
+        // img
+        //     order -1
+        //     margin-right auto
+        .footer-endereco
+            margin-right 0
+    +mobile()
+        // img
+        //     display none
+        .center
+            display block
+            padding 20px 0
+        .footer-endereco
+            margin 20px 0 0
+    .copyright
+        border-top 1px solid rgba($cinza, .2)
+        padding 0
+        montserrat 10
+        color $fontfooter
+        font-size 11px
+        text-align center
+        +mobile()
+            span
+                font-size 0
+                display block
