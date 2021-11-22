@@ -5,13 +5,12 @@
     <h1>Bem Vindo(a),</h1>
     <br>
     <p>
-        Pelo painel administrativo da
-        <a href="http://www.trupe.net" target="_blank">Trupe</a>
-        você pode controlar as principais funções e conteúdo do site.
+        Através deste painel administrativo da
+        <a href="https://uners.com.br" target="_blank">Uners Horizon</a>
+        você pode controlar os principais conteúdos do site.
     </p>
     <p>
-        Em caso de dúvidas entrar em contato:
-        <a href="mailto:contato@trupe.net">contato@trupe.net</a>
+        Adicione, edite, exclua imagens, títulos e paragrafos do site com apenas alguns cliques.
     </p>
 
 @endsection

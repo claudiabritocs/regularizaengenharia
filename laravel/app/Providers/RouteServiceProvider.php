@@ -26,10 +26,14 @@ class RouteServiceProvider extends ServiceProvider
     {
 		$router->model('imagens', 'App\Models\Imagem');
 		$router->model('home', 'App\Models\Home');
+        $router->model('principal', 'App\Models\Principal');
+        $router->model('banners', 'App\Models\Banners');
+        $router->model('servicos', 'App\Models\Servicos');
 		$router->model('configuracoes', 'App\Models\Configuracoes');
         $router->model('recebidos', 'App\Models\ContatoRecebido');
-        $router->model('contato', 'App\Models\Contato');
+        // $router->model('contato', 'App\Models\Contato');
         $router->model('usuarios', 'App\Models\User');
+
 
 
         parent::boot($router);

@@ -8,8 +8,8 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <base href="{{ url('/') }}">
 
-    <meta name="author" content="Trupe Agência Criativa">
-    <meta name="copyright" content="{{ date('Y') }} Trupe Agência Criativa">
+    <meta name="author" content="Claudia Brito">
+    <meta name="copyright" content="{{ date('Y') }} Claudia Brito">
     <meta name="description" content="{{ $config->description }}">
     <meta name="keywords" content="{{ $config->keywords }}">
 
@@ -30,6 +30,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@900&display=swap" rel="stylesheet">
+    
+    <!-- Start WOWSlider.com HEAD section -->
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/js/wowslider/engine1/style.css') }}" />
+    <script type="text/javascript" src="{{ asset('assets/js/wowslider/engine1/jquery.js') }}"></script>
+    <!-- End WOWSlider.com HEAD section -->
+
+
 </head>
 <body>
     @include('frontend.common.header')
@@ -39,7 +49,6 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 	<script>window.jQuery || document.write('<script src="{{ asset('assets/vendor/jquery/dist/jquery.min.js') }}"><\/script>')</script>
     <script src="{{ asset('assets/js/vendor.main.js') }}"></script>
-    <script src="{{ asset('assets/vendor/rellax/rellax.min.js') }}"></script>
     <script src="{{ asset('assets/vendor/jquery-cycle2/build/jquery.cycle2.min.js') }}"></script>
     <script src="{{ asset('assets/vendor/fancybox/source/jquery.fancybox.pack.js') }}"></script>
     <script src="{{ asset('assets/vendor/imagesloaded/imagesloaded.pkgd.min.js') }}"></script>

@@ -23,9 +23,6 @@ class HomeController extends Controller
         try {
             $input = $request->all();
 
-            if (isset($input['imagem_sobre_1'])) $input['imagem_sobre_1'] = Home::upload_imagem_sobre_1();
-            if (isset($input['imagem_sobre_2'])) $input['imagem_sobre_2'] = Home::upload_imagem_sobre_2();
-
             $registro->update($input);
 
             return redirect()->route('painel.home.index')->with('success', 'Registro alterado com sucesso.');

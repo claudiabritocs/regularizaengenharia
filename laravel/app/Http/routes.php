@@ -15,11 +15,12 @@ Route::group(['middleware' => ['web']], function () {
         /* GENERATED ROUTES */
 		Route::resource('imagens', 'ImagensController');
 		Route::resource('home', 'HomeController', ['only' => ['index', 'update']]);
+        Route::resource('principal', 'PrincipalController');
+        Route::resource('banners', 'BannersController');
+        Route::resource('servicos', 'ServicosController');
 		Route::resource('configuracoes', 'ConfiguracoesController', ['only' => ['index', 'update']]);
 
-        Route::get('contato/recebidos/{recebidos}/toggle', ['as' => 'painel.contato.recebidos.toggle', 'uses' => 'ContatosRecebidosController@toggle']);
-        Route::resource('contato/recebidos', 'ContatosRecebidosController');
-        Route::resource('contato', 'ContatoController');
+
         Route::resource('usuarios', 'UsuariosController');
 
         Route::post('ckeditor-upload', 'PainelController@imageUpload');

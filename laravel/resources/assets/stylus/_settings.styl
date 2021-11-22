@@ -1,30 +1,21 @@
 desktop-base-width     = 1285px
-rupture.desktop-cutoff = $tablet = 1345px
+rupture.desktop-cutoff = $tablet = 1260px
 rupture.mobile-cutoff  = $mobile = 768px
 rupture.anti-overlap   = -1px
 
 
-$cinza      = #2E4A6C
-$azul       = #2E4A6C
-$laranja    = #FF7E1D
-$bgfooter   = #0A2B53
-$fontfooter = #ffffff
-$bg2        =#F3F3F3
-$rosa       = #732d6f
+$verde      = #15872C
+$bgcolor = #f0f3f5
+$footerbg = #343434
 
-
-
-@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300;500;700&display=swap');
-
-dosis($size, $weight = normal, $style = normal)
+// Fonts
+lato($size)
+    font-family 'Lato', sans-serif
     font-size $size + 0px
-    font-family 'Dosis', 'Helvetica', 'Arial', sans-serif
-    font-weight 500
-    font-style $style
-    if $weight == light
-        font-weight 300
-    if $weight == bold
-        font-weight 700
+
+muli($size)
+    font-family 'Mulish', sans-serif
+    font-size $size + 0px
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat');
 

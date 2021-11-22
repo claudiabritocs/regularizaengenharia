@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use App\Http\Requests\Request;
 
-class ProjetosVideosRequest extends Request
+class ServicosEditRequest extends Request
 {
     public function authorize()
     {
@@ -15,7 +15,8 @@ class ProjetosVideosRequest extends Request
     {
         return [
             'titulo' => 'required',
-            'video'  => 'required',
+            'paragrafo' => 'required',
+            'imagem' => ''
         ];
     }
 }

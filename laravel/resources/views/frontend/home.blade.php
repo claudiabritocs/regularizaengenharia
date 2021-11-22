@@ -2,71 +2,103 @@
 
 @section('content')
 
-    <div class="home">
-        <div class="home-line"></div>
-        <div class="banners">
-            @foreach($banners as $b)
-                @if($b->link)
-                <a href="{{ Tools::parseLink($b->link) }}" class="slide" style="background-image:url({{ asset('assets/img/banners/'.$b->imagem) }})">
-                    @if($b->projeto)
-                    <span class="projeto">{{ $b->projeto }}</span>
-                    @endif
-                </a>
-                @else
-                <div class="slide" style="background-image:url({{ asset('assets/img/banners/'.$b->imagem) }})">
-                    @if($b->projeto)
-                    <span class="projeto">{{ $b->projeto }}</span>
-                    @endif
-                </div>
-                @endif
-            @endforeach
-
-            <img src="{{ asset('assets/img/layout/marca-andreaparreira.svg') }}" class="banners-logo" alt="">
-            <a href="#" class="cycle-prev"></a>
-            <a href="#" class="cycle-next"></a>
-            <!-- <a href="#" class="scroll-down">SCROLL DOWN</a> -->
-        </div>
-
-        @if($home->frase || $home->texto)
-        <div class="texto">
-            <div class="center">
-                <div>
-                    <h2>
-                        <span>{{ $home->frase }}</span>
-                    </h2>
-
-                    {!! $home->texto !!}
-                </div>
-            </div>
-        </div>
-        @endif
-
-        @if($home->video || count($imagens))
-        <div class="conteudo center-full @if(!count($imagens)) video-only @endif">
-            @if($home->video)
-            <div class="video">
-                <iframe src="{{ $home->video }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-            @endif
-
-            @if(count($imagens))
-            <div class="imagens">
-                @foreach($imagens as $i)
-                    @if($i->link)
-                    <a href="{{ Tools::parseLink($i->link) }}">
-                        <img src="{{ asset('assets/img/imagens/'.$i->imagem) }}" alt="">
-                    </a>
-                    @else
-                    <img src="{{ asset('assets/img/imagens/'.$i->imagem) }}" alt="">
-                    @endif
-                @endforeach
-                @if(count($imagens) % 2)
-                <div class="filler"></div>
-                @endif
-            </div>
-            @endif
-        </div>
-        @endif
+<body>
+  <section class="inicial">
+    <div class="banner">
+      <img src="{{ asset('assets/img/layout/Logo_REGULARIZA_png01.png') }}" alt="Logo Regulariza Engenharia">
+      <h1>{{ $home->titulo }}</h1>
+      <h2>{{ $home->subtitulo }}</h2>
+      <a href="#"><div class="mainbutton"><p>Clique Aqui</p></div></a>
     </div>
+
+    <!-- Start WOWSlider.com BODY section -->
+    <div id="wowslider-container1">
+      <div class="ws_images" style="height: 675px; width: 100%;">
+          <ul>
+              @foreach ($banners as $item)
+              <li><img src="{{ asset('assets/img/banners/')}}/{!! $item->imagem !!}" id="wows1_0"></li>
+              @endforeach
+          </ul>
+      </div>
+      <div class="ws_shadow"></div>
+    </div>	
+    <script type="text/javascript" src="{{ asset('assets/js/wowslider/engine1/wowslider.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/js/wowslider/engine1/script.js') }}"></script>
+    <!-- End WOWSlider.com BODY section -->
+  </section>
+
+  <div class="total">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+
+  <section class="cardsbeneficios">
+    @foreach ($servicos as $servico)
+    <h3>{{ $servico->titulo }}</h3>
+    <p>{{ $servico->paragrafo }}</p>
+    <img src="{{ asset('assets/img/servicos/'.$servico->imagem)}}" alt="">
+    <button>#</button>
+    @endforeach
+  </section>
+
+  <section class="certificados">
+    <span>Empresa registrada no Conselho Regional de Engenharia e Agronomia do Estado de São Paulo.</span>
+    <img src="" alt="">
+    <img src="" alt="">
+    <img src="" alt="">
+    <img src="" alt="">
+    <img src="" alt="">
+  </section>
+
+  <section class="contatos">
+    <h5>Sobre</h5>
+    <div class="contatoscards">
+      <div>
+        <h6>Endereço</h6>
+        <p>xxxxx</p>
+      </div>
+      <div>
+        <h6>Telefones</h6>
+        <p>xxxxx</p>
+      </div>
+      <div>
+        <h6>E-mail</h6>
+        <p>xxxxx</p>
+      </div>
+      <div>
+        MAPA??
+      </div>
+    </div>
+  </section>
+
+  <section class="FAQ">
+    <div class="blocos">
+      <h4>Question</h4>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla iure deserunt quas facilis unde, hic eveniet placeat quasi reprehenderit sit voluptatem optio? Perspiciatis, odio? Praesentium quos explicabo dignissimos vero eligendi.</p>
+    </div>
+    <div class="blocos">
+      <h4>Question</h4>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla iure deserunt quas facilis unde, hic eveniet placeat quasi reprehenderit sit voluptatem optio? Perspiciatis, odio? Praesentium quos explicabo dignissimos vero eligendi.</p>
+    </div>
+    <div class="blocos">
+      <h4>Question</h4>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla iure deserunt quas facilis unde, hic eveniet placeat quasi reprehenderit sit voluptatem optio? Perspiciatis, odio? Praesentium quos explicabo dignissimos vero eligendi.</p>
+    </div>
+    <div class="blocos">
+      <h4>Question</h4>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla iure deserunt quas facilis unde, hic eveniet placeat quasi reprehenderit sit voluptatem optio? Perspiciatis, odio? Praesentium quos explicabo dignissimos vero eligendi.</p>
+    </div>
+  </section>
+
+  <section class="lastcall">
+    <h5>Texto1</h5>
+    <p>Texto2</p>
+    <button>BOTÃO</button>
+  </section>
+
+</body>
+
 
 @endsection

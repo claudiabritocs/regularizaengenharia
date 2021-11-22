@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use App\Http\Requests\Request;
 
-class ProjetosCategoriasRequest extends Request
+class PrincipalRequest extends Request
 {
     public function authorize()
     {
@@ -14,7 +14,8 @@ class ProjetosCategoriasRequest extends Request
     public function rules()
     {
         return [
-            'titulo' => 'required'
+            'titulo' => 'required',
+            'subtitulo' => 'required',
         ];
     }
 }

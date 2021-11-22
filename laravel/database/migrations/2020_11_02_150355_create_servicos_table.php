@@ -9,6 +9,7 @@ class CreateServicosTable extends Migration
     {
         Schema::create('servicos', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('ordem');
             $table->string('titulo');
             $table->text('paragrafo');
             $table->string('imagem');
