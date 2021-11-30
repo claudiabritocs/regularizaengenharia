@@ -1,55 +1,394 @@
 .inicial
-  position: relative
+  position relative
 
-.banner
-  background-color: rgba(0, 0, 0, 0.6)
-  width: 100%
-  position: absolute
-  z-index: 200
-  img
-    width: 252px
-    height: auto
-    display: block
-    margin-left: auto
-    margin-right: auto
-    padding-top: 86px
-  h1 
-    lato 50
+.ws_images
+  max-height 675px!important
+  +below($tablet)
+    height auto!important
+.hidden_call
+  display none
+  +below($mobile)
+    display block
+    background-color #506d4c
+    height 180px
+  h1
+    lato 25
     color white
     font-weight 900
-    margin-top 86px
-    margin-left 25%
+    text-shadow 2px 2px 2px #424242
+    text-align center
+    padding-top 20px
   h2 
-    font-family: 'Montserrat'
+    font-family 'Montserrat'
+    font-size 14px
     color white
-    font-size 37px
-    margin-top 20px
-    margin-left 25%
+    text-shadow 2px 2px 2px #424242
+    text-align center
+    padding-top 10px 
   .mainbutton
+    margin-top 30px
+    margin-left auto
+    margin-right auto
+    border-radius 4px
+    background-color $verde
+    width 220px
+    height 50px
+    &:hover
+      background #032f11
+  p
+    muli 16
+    font-weight 900
+    color white
+    text-transform uppercase
+    letter-spacing 0.5px
+    text-align center
+    padding-top 13px
+.banner
+  width 100%
+  max-height 675px
+  position absolute
+  z-index 91
+  img
+    max-width 252px
+    height auto
+    display block
+    margin-left auto
+    margin-right auto
+    padding-top 80px
+    +below(1600px)
+      padding-top 40px
+    +below($tablet)
+      width 20%
+      padding-top 20px
+    +below($mobile)
+      width 40%
+  h1
+    lato 45
+    color white
+    font-weight 900
+    text-shadow 2px 2px 2px #424242
+    margin-left 25%
     margin-top 80px
-    margin-bottom 80px
+    +below(1600px)
+      lato 40
+      margin-top 40px
+    +below($tablet)
+      lato 25
+      text-align center
+      margin-left 0px
+      margin-top 25px
+    +below($mobile)
+      display none
+  h2 
+    font-family 'Montserrat'
+    color white
+    text-shadow 2px 2px 2px #424242
+    margin-left 25%
+    margin-top 20px 
+    +below(1600px)
+      font-size 20px
+      margin-top 25px 
+    +below($tablet)
+      font-size 17px
+      text-align center
+      margin-left 0px
+      margin-top 10px
+      +below($mobile)
+        display none
+  .mainbutton
+    margin-top 58px
     margin-left 25%
     border-radius 4px
     background-color $verde
     color white
-    width: 317px
-    height: 55px
+    width 317px
+    height 55px
+    &:hover
+      background #032f11
+    +below(1600px)
+      margin-top 48px
+    +below($tablet)
+      margin-right auto
+      margin-left auto
+      margin-top 15px
+      width 250px
+      height 43px
+      +below($mobile)
+       display none
     p
       muli 19
+      font-weight 900
       text-transform uppercase
       letter-spacing 0.5px
-      text-align: center
-      padding-top: 13px
-    
+      text-align center
+      padding-top 13px
+      +below($tablet)
+        muli 14
 
+// Serviços
 
-.total
-  div:nth-child(even)
-    background: red
-    width: 400px
-    height: 300px
-  div:nth-child(odd) 
-    background: green
-    width: 100px
-    height: 100px
+.cards-father
+  display block
+  +above(1600px)
+    width 80%
+    margin-left auto
+    margin-right auto
+  .cards-sons:nth-child(odd) 
+    display flex
+    margin 20px 10%
+    align-items center
+    +below($tablet)
+      flex-direction column-reverse
+      margin 30px 0
+    +below($mobile)
+      margin 25px 0
+    .cardinfo
+      display block
+      width 60%
+      margin 60px 10px
+      padding 50px
+      +below($tablet)
+        display block
+        margin 0
+        padding 30px
+      +below($mobile)
+        width 80%
+        padding 13px
+      h3
+        lato 20
+        font-weight 900
+        letter-spacing 0.5px
+        +below($tablet)
+          text-align center
+        +below($mobile)
+          lato 18
+      p
+        muli 15 300
+        margin-top 10px
+        +below($tablet)
+          padding 0
+          margin-right auto
+          margin-left auto
+          width 400px
+        +below($mobile)
+          width auto
+          text-align justify
+      .cardbutton
+        margin-top 30px
+        border-radius 4px
+        background-color $verde
+        color white
+        width 211px
+        height 46px
+        &:hover
+          background #032f11
+        +below($tablet)
+          margin-right auto
+          margin-left auto
+          width 400px
+        +below($mobile)
+          width 200px
+        h4
+          muli 16
+          font-weight 900
+          text-transform uppercase
+          letter-spacing 0.5px
+          text-align center
+          padding-top 13px
+    .cardimg
+      display block
+      width 40%
+      +below($tablet)
+        text-align center
+        width 100%
+      +below($mobile)
+        width 100%
+        img
+          width 250px
+          margin-top 40px
+  .cards-sons:nth-child(even)
+    display flex
+    flex-direction row-reverse
+    align-items center
+    margin-top 20px
+    margin-bottom 30px
+    margin-right 7%
+    margin-left 12%
+    +below($tablet)
+      flex-direction column-reverse
+      margin 30px 0
+    +below($mobile)
+      margin 25px 0
+    .cardinfo
+      display block
+      width 60%
+      text-align start
+      margin 60px 10px
+      padding 50px
+      +below($tablet)
+        display block
+        margin 0
+        padding 30px
+      +below($mobile)
+        width 80%
+        padding 13px
+      h3
+        lato 20
+        font-weight 900
+        letter-spacing 0.5px
+        +below($tablet)
+          text-align center
+        +below($mobile)
+          lato 18
+      p
+        muli 15 300
+        margin-top 10px
+        padding-right 60px
+        +below($tablet)
+          padding 0
+          margin-right auto
+          margin-left auto
+          width 400px
+        +below($mobile)
+          width auto
+          text-align justify
+      .cardbutton
+        margin-top 30px
+        border-radius 4px
+        background-color $verde
+        color white
+        width 211px
+        height 46px
+        &:hover
+          background #032f11
+        +below($tablet)
+          margin-right auto
+          margin-left auto
+          width 400px
+        +below($mobile)
+          width 200px
+        h4
+          muli 16
+          font-weight 900
+          text-transform uppercase
+          letter-spacing 0.5px
+          text-align center
+          padding-top 13px
+    .cardimg
+      display block
+      width 40%
+      text-align end
+      +below($tablet)
+        text-align center
+        width 100%
+      +below($mobile)
+        width 100%
+        img
+          width 250px
+          margin-top 40px
 
+// Certificados
+
+.cert_div
+  background-color #f0f3f5
+  .cert_principal
+    display flex
+    max-width 80%
+    margin-right auto
+    margin-left auto
+    column-gap 60px
+    +above(1600px)
+      max-width 65%
+    +below($tablet)
+      flex-wrap wrap
+      justify-content center
+      text-align center
+    p
+      lato 29 
+      font-weight 700
+      display flex
+      align-items center
+      +below($tablet)
+        lato 22
+      +below($mobile)
+        lato 20
+    img
+      +below($mobile)
+        max-width 250px
+      
+  .img_cert
+    height 100px
+    display flex
+    justify-content space-evenly
+    padding-bottom 65px
+    +below($tablet)
+      flex-wrap wrap
+      justify-content space-around
+    +below($mobile)
+      justify-content center
+      column-gap 20px
+      padding-bottom 140px
+    img
+      height 100px
+      +below($tablet)
+        height 75px
+        margin-top 30px
+      +below($mobile)
+        height 65px
+
+// Contato / Mapa
+      
+.contatos
+  display block
+  margin 60px 0
+  h5 
+    opens 40
+    font-weight 600
+    letter-spacing -1px
+    text-align center
+    margin-bottom 40px
+    +below($mobile)
+      opens 25
+  .contatoscards
+    display flex
+    justify-content space-around
+    padding 0 100px
+    +above(1600px)
+      padding 0 200px
+    +below($tablet)
+      padding 0
+      display block
+      text-align center
+    h6 
+      lato 20
+      font-weight 900
+      vertical-align middle
+      margin 10px 0
+      +below($tablet)
+        lato 30
+        margin-top 40px
+      +below($mobile)
+        lato 18
+    p
+      muli 14
+      +below($tablet)
+        muli 19
+      +below($mobile)
+        muli 14
+#end
+  max-width 200px
+  margin-left auto
+  margin-right auto
+        
+.mapgoggle
+  margin-top 50px
+  width 1000px
+  height 572px
+  margin-left auto
+  margin-right auto
+  +below($tablet)
+    width 750px
+    height 450px
+  +below($mobile)
+    width 300px
+    height 200px

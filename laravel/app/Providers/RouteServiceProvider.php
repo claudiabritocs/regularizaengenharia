@@ -29,6 +29,8 @@ class RouteServiceProvider extends ServiceProvider
         $router->model('principal', 'App\Models\Principal');
         $router->model('banners', 'App\Models\Banners');
         $router->model('servicos', 'App\Models\Servicos');
+        $router->model('contato', 'App\Models\Contato');
+        $router->model('certificados', 'App\Models\Certificados');
 		$router->model('configuracoes', 'App\Models\Configuracoes');
         $router->model('recebidos', 'App\Models\ContatoRecebido');
         // $router->model('contato', 'App\Models\Contato');

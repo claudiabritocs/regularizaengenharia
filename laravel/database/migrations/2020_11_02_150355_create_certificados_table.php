@@ -9,6 +9,7 @@ class CreateCertificadosTable extends Migration
     {
         Schema::create('certificados', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('ordem')->default(0);
             $table->string('imagem');
             $table->timestamps();
         });

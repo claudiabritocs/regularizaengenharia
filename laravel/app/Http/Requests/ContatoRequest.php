@@ -26,9 +26,9 @@ class ContatoRequest extends Request
         return [
             'email'       => 'email|required',
             'telefone'    => 'required',
+            'telefone_2'  => '',
             'endereco'    => 'required',
-            'google_maps' => 'required',
-            'imagem'      => 'image',
+            'google_maps' => '',
         ];
     }
 }

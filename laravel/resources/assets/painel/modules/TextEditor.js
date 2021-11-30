@@ -4,7 +4,7 @@ const config = {
     },
 
     clean: {
-        toolbar: [],
+        toolbar: ['RemoveFormat'],
         removePlugins: 'toolbar,elementspath',
     },
 

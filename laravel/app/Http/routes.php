@@ -18,6 +18,8 @@ Route::group(['middleware' => ['web']], function () {
         Route::resource('principal', 'PrincipalController');
         Route::resource('banners', 'BannersController');
         Route::resource('servicos', 'ServicosController');
+        Route::resource('contato', 'ContatoController');
+        Route::resource('certificados', 'CertificadosController');
 		Route::resource('configuracoes', 'ConfiguracoesController', ['only' => ['index', 'update']]);
 
 
