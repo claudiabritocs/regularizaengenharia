@@ -14,4 +14,7 @@
   <li @if(Tools::routeIs('painel.contato*')) class="active" @endif>
     <a href="{{ route('painel.contato.index') }}">Contato</a>
   </li>
+  <li @if(Tools::routeIs('painel.faq*')) class="active" @endif>
+    <a href="{{ route('painel.faq.index') }}">FAQ</a>
+  </li>
 </ul>

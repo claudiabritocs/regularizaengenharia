@@ -18,7 +18,7 @@ class AppServiceProvider extends ServiceProvider
         });
 
         view()->composer('frontend.*', function($view) {
-            // $view->with('contato', \App\Models\Contato::first());
+            $view->with('contato', \App\Models\Contato::first());
         });
 
         view()->composer('painel.common.nav', function($view) {

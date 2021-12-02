@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Faq;
 use App\Models\Banners;
 use App\Models\Contato;
 use App\Models\Servicos;
@@ -18,6 +19,7 @@ class HomeController extends Controller
             'banners' => Banners::ordenados()->get(),
             'servicos' => Servicos::ordenados()->get(),
             'certificados' => Certificados::ordenados()->get(),
+            'faq' => Faq::ordenados()->get(),
         ]);
     }
 }

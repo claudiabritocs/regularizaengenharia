@@ -9,6 +9,7 @@ class CreateFaqTable extends Migration
     {
         Schema::create('faq', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('ordem');
             $table->string('titulo');
             $table->text('paragrafo');
             $table->timestamps();

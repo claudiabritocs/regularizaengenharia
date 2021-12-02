@@ -84,31 +84,21 @@
     @endif
   </section>
 
+
   <section class="FAQ">
-    <div class="blocos">
-      <h4>Question</h4>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla iure deserunt quas facilis unde, hic eveniet placeat quasi reprehenderit sit voluptatem optio? Perspiciatis, odio? Praesentium quos explicabo dignissimos vero eligendi.</p>
+    <div class="faixafaq">
+      <h5>F.A.Q.</h5>
     </div>
-    <div class="blocos">
-      <h4>Question</h4>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla iure deserunt quas facilis unde, hic eveniet placeat quasi reprehenderit sit voluptatem optio? Perspiciatis, odio? Praesentium quos explicabo dignissimos vero eligendi.</p>
-    </div>
-    <div class="blocos">
-      <h4>Question</h4>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla iure deserunt quas facilis unde, hic eveniet placeat quasi reprehenderit sit voluptatem optio? Perspiciatis, odio? Praesentium quos explicabo dignissimos vero eligendi.</p>
-    </div>
-    <div class="blocos">
-      <h4>Question</h4>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla iure deserunt quas facilis unde, hic eveniet placeat quasi reprehenderit sit voluptatem optio? Perspiciatis, odio? Praesentium quos explicabo dignissimos vero eligendi.</p>
+    <div class="allblocos">
+      @foreach ($faq as $f)
+        <div class="blocos">
+          <h4>{{ $f->titulo }}</h4>
+          <hr>
+          <p>{{ $f->paragrafo }}</p>
+        </div>
+      @endforeach
     </div>
   </section>
-
-  <section class="lastcall">
-    <h5>Texto1</h5>
-    <p>Texto2</p>
-    <button>BOTÃO</button>
-  </section>
-
 </body>
 
 
