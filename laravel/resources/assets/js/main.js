@@ -131,3 +131,37 @@ function abrirBurger() {
     var temp = document.getElementById("menuburgerlist");
     temp.classList.toggle("menuburgerlist");
 }
+
+
+//EFFEITOS
+// const sons = document.getElementById("sons");
+
+// apagar.addEventListener('wait', efeitos)
+
+// function efeitos(){
+//     olam.classList.add("olam2");
+// }
+
+
+
+document.addEventListener("DOMContentLoaded", function(event) {
+    document.addEventListener("scroll", function(event) {
+        const animatedBoxes = document.getElementsByClassName("cards-sons");
+        const windowOffsetTop = window.innerHeight + window.scrollY;
+
+        Array.prototype.forEach.call(animatedBoxes, (animatedBox) => {
+            const animatedBoxOffsetTop = animatedBox.offsetTop;
+
+            if (windowOffsetTop >= animatedBoxOffsetTop) {
+                addClass(animatedBox, "cards-sons2");
+            }
+        });
+    });
+});
+
+function addClass(element, className) {
+    const arrayClasses = element.className.split(" ");
+    if (arrayClasses.indexOf(className) === -1) {
+        element.className += " " + className;
+    }
+}

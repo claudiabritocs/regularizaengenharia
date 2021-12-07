@@ -35,7 +35,7 @@
 
   <section class="cards-father">
     @foreach ($servicos as $servico)
-    <div class="cards-sons">
+    <div class="cards-sons" id="sons">
       <div class="cardinfo">
         <h3>✔ {{ $servico->titulo }}</h3>
         <p>{{ $servico->paragrafo }}</p>

@@ -2,6 +2,9 @@
 
 Route::group(['middleware' => ['web']], function () {
     Route::get('/', 'HomeController@index')->name('home');
+    Route::get('regularizacao', 'RegularizacaoController@index')->name('regularizacao');
+    Route::get('contato', 'ContatoController@index')->name('contato');
+    Route::post('contato', 'ContatoController@post')->name('contato.post');
     
 
     // Painel

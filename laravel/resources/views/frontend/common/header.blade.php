@@ -7,7 +7,7 @@
         <nav class="menulongo">
             <ul>
                 <a href="{{ route('home') }}"><li>Home</li></a>
-                <a href="#"><li>Regularização</li></a>
+                <a href="{{ route('regularizacao') }}"><li>Regularização</li></a>
                 <a href="#"><li>Serviços</li></a>
                 <a href="#"><li>Contato</li></a>
                 <a href="#" id="termos"><li>Termos ▼</li></a>

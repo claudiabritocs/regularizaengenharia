@@ -1,6 +1,8 @@
 .inicial
   position relative
 
+// BANNER
+
 .ws_images
   max-height 675px!important
   +below($tablet)
@@ -125,184 +127,190 @@
       +below($tablet)
         muli 14
 
+// CHAMADA
 
-// Serviços
-
-.cards-father
-  overflow hidden
+.the_call
+  background-color rgba(162,213,170,255)
+  height auto
+  width 100%
   display block
-  margin-bottom 75px
-  +above(1600px)
-    width 80%
-    margin-left auto
-    margin-right auto
-  .cards-sons:nth-child(odd) 
-    display flex
-    margin 20px 10%
-    align-items center
-    transform translateX(-1684px)
-    transition 2s all
-    +below($tablet)
-      flex-direction column-reverse
-      margin 30px 0
-    +below($mobile)
-      margin 25px 0
-    .cardinfo
-      display block
-      width 60%
-      margin 60px 10px
-      padding 50px
-      +above(1600px)
-        margin 20px 10px
-      +below($tablet)
-        display block
-        margin 0
-        padding 30px
-      +below($mobile)
-        width 80%
-        padding 13px
-      h3
-        lato 20
-        font-weight 900
-        letter-spacing 0.5px
-        +below($tablet)
-          text-align center
-        +below($mobile)
-          lato 18
-      p
-        muli 15 300
-        margin-top 10px
-        +below($tablet)
-          padding 0
-          margin-right auto
-          margin-left auto
-          width 400px
-        +below($mobile)
-          width auto
-          text-align justify
-      .cardbutton
-        margin-top 30px
-        border-radius 4px
-        background-color $verde
-        color white
-        width 211px
-        height 46px
-        &:hover
-          background #032f11
-        +below($tablet)
-          margin-right auto
-          margin-left auto
-          width 400px
-        +below($mobile)
-          width 200px
-        h4
-          muli 16
-          font-weight 900
-          text-transform uppercase
-          letter-spacing 0.5px
-          text-align center
-          padding-top 13px
-    .cardimg
-      display block
-      width 40%
-      +below($tablet)
-        text-align center
+  padding 90px 0
+  .white_box
+    position relative
+    background-color white
+    box-shadow 2px 2px 6px rgba(83, 83, 83, 0.76)
+    border-radius 10px
+    height 690px
+    width 690px
+    margin-left 40%
+    padding-top 50px
+    .imgtablet
+      position absolute
+      height auto
+      width 377px
+      left -300px
+      top 60px
+      img
         width 100%
-      +below($mobile)
-        width 100%
-        img
-          width 250px
-          margin-top 40px
-  .cards-sons:nth-child(even)
-    display flex
-    flex-direction row-reverse
-    align-items center
-    margin-top 20px
-    margin-bottom 30px
-    margin-right 7%
-    margin-left 12%
-    transform translateX(2139px)
-    transition 2s all
-    +below($tablet)
-      flex-direction column-reverse
-      margin 30px 0
-    +below($mobile)
-      margin 25px 0
-    .cardinfo
-      display block
-      width 60%
-      text-align start
-      margin 60px 10px
-      padding 50px
-      +above(1600px)
-        margin 20px 10px
-      +below($tablet)
-        display block
-        margin 0
-        padding 30px
-      +below($mobile)
-        width 80%
-        padding 13px
-      h3
-        lato 20
-        font-weight 900
-        letter-spacing 0.5px
-        +below($tablet)
-          text-align center
-        +below($mobile)
-          lato 18
-      p
-        muli 15 300
-        margin-top 10px
-        padding-right 60px
-        +below($tablet)
-          padding 0
-          margin-right auto
-          margin-left auto
-          width 400px
-        +below($mobile)
-          width auto
-          text-align justify
-      .cardbutton
-        margin-top 30px
-        border-radius 4px
-        background-color $verde
-        color white
-        width 211px
-        height 46px
-        &:hover
-          background #032f11
-        +below($tablet)
-          margin-right auto
-          margin-left auto
-          width 400px
-        +below($mobile)
-          width 200px
-        h4
-          muli 16
-          font-weight 900
-          text-transform uppercase
-          letter-spacing 0.5px
-          text-align center
-          padding-top 13px
-    .cardimg
-      display block
-      width 40%
-      text-align end
-      +below($tablet)
-        text-align center
-        width 100%
-      +below($mobile)
-        width 100%
-        img
-          width 250px
-          margin-top 40px
+        height auto
+    h2 
+      lato 32
+      font-weight 900
+      padding 10px 110px
+    .p_par
+      muli 15
+      padding 10px 110px
+      font-weight 300
+      .verde
+        color #16A085
+        font-weight bold
+      .amarela
+        color #f1c40f
+        font-weight bold
+    .btn_regularizacao
+      margin-top 30px
+      margin-left auto
+      margin-right auto
+      border-radius 4px
+      background-color $verde
+      width 220px
+      height 50px
+      &:hover
+        background #032f11
+    .p_btn
+      muli 18
+      font-weight 900
+      color white
+      text-transform uppercase
+      letter-spacing 0.5px
+      text-align center
+      padding-top 13px
+        
+// Beneficios
 
-.cards-sons2
-  transform translateX(0)!important
+.beneficios
+  background-color #f4f4f4
+  h1
+    muli 40
+    font-weight 700
+    text-align center
+    padding 50px 0
+
+.box_father
+  padding-bottom 50px
+  .box1
+    display flex
+    justify-content center
+    column-gap 65px
+    margin-bottom 65px
+    .box_sons
+      border 2px solid rgba(59, 119, 32, 0.996)
+      border-radius 9px
+      box-shadow rgb(75, 75, 75) 0px 0px 7px 0px
+      width 470px
+      height 490px
+      text-align center
+      .icon
+        height 105px
+        width auto
+        padding 40px 0
+      h2 
+        opens 26
+        font-weight 600
+        margin-bottom 25px
+      p
+        muli 19
+        font-weight 300
+        padding 0 25px
+
+  .box2
+    display flex
+    justify-content center
+    column-gap 65px
+    margin-bottom 65px
+    .box_sons
+      border 2px solid rgba(59, 119, 32, 0.996)
+      border-radius 9px
+      box-shadow rgb(75, 75, 75) 0px 0px 7px 0px
+      width 470px
+      height 490px
+      text-align center
+      .icon
+        height 105px
+        width auto
+        padding 40px 0
+      h2 
+        opens 26
+        font-weight 600
+        margin-bottom 25px
+      p
+        muli 19
+        font-weight 300
+        padding 0 28px
+
+  .btn_regularizacao
+        margin-top 30px
+        margin-left auto
+        margin-right auto
+        border-radius 4px
+        background-color $verde
+        width 220px
+        height 50px
+        &:hover
+          background #032f11
+      .p_btn
+        muli 18
+        font-weight 900
+        color white
+        text-transform uppercase
+        letter-spacing 0.5px
+        text-align center
+        padding-top 13px
+
+
 
 
 // Certificados
+
+// CHAMADA-BOTTOM
+
+.imgcall
+  position relative
+  z-index 1
+  .call_h2
+    position absolute
+    top 103px
+    left 224px
+    muli 37
+    font-weight 400
+    color white
+  .call_h3
+    position absolute
+    top 147px
+    left 224px
+    color white
+    lato 50
+    font-weight 900
+  .btn_call
+    position absolute
+    top 265px
+    left 224px
+    border-radius 2px
+    background-color $verde
+    color white
+    width 340px
+    height 55px
+    &:hover
+      background #032f11
+    p
+      muli 19
+      font-weight 900
+      text-transform uppercase
+      letter-spacing 0.5px
+      text-align center
+      padding-top 13px
+  img
+    width 100%
 
 .cert_div
   background-color #f0f3f5
@@ -350,6 +358,7 @@
         margin-top 30px
       +below($mobile)
         height 65px
+
 
 // Contato / Mapa
       
@@ -429,7 +438,7 @@
       text-align justify
       display block
       margin 30px auto
-      box-shadow 2px 2px 8px rgba(24, 24, 24, 0.664)
+      box-shadow: 2px 2px 8px rgba(24, 24, 24, 0.664);
       border-radius 6px
       padding 30px 50px
       +below($tablet)
@@ -457,37 +466,5 @@
       hr
         border-top 1px solid lightgray
 
-// FOOTER
 
-.footer
-  background-color #343434
-  display flex
-  justify-content space-evenly
-  +below($mobile)
-    flex-wrap wrap
-  .firstb
-    margin 30px
-    text-align justify
-    +below($mobile)
-      margin 10px 30px
-    h6 
-      lato 15
-      color white
-      padding 20px 0
-    p
-      muli 13
-      color white
-      padding-bottom 20px
-  .secondb
-    margin 30px
-    max-width 260px
-    +below($mobile)
-      margin 10px 30px
-    p
-      lato 17
-      color white
-      font-weight 900
-      margin 20px 0
-      +below($mobile)
-        lato 15
       
