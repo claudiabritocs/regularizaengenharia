@@ -48,6 +48,19 @@
   max-height 675px
   position absolute
   z-index 91
+  .btn_link0
+    width 317px
+    height 55px
+    margin-left 25%
+    margin-top 3%
+    +below($tablet)
+      margin-top 2%
+      margin-left auto
+      margin-right auto
+      width 250px
+      height 43px
+    a   
+      height 50px
   img
     max-width 252px
     height auto
@@ -96,8 +109,6 @@
       +below($mobile)
         display none
   .mainbutton
-    margin-top 58px
-    margin-left 25%
     border-radius 4px
     background-color $verde
     color white
@@ -105,12 +116,7 @@
     height 55px
     &:hover
       background #032f11
-    +below(1600px)
-      margin-top 48px
     +below($tablet)
-      margin-right auto
-      margin-left auto
-      margin-top 15px
       width 250px
       height 43px
       +below($mobile)
@@ -161,6 +167,14 @@
       +below($mobile)
         width 80%
         padding 13px
+      .btn_ser
+        width 211px
+        +below($tablet)
+          width 400px
+          margin-right auto
+          margin-left auto
+        +below($mobile)
+          width 211px
       h3
         lato 20
         font-weight 900
@@ -243,6 +257,14 @@
       +below($mobile)
         width 80%
         padding 13px
+      .btn_ser
+        width 211px
+        +below($tablet)
+          width 400px
+          margin-right auto
+          margin-left auto
+        +below($mobile)
+          width 211px
       h3
         lato 20
         font-weight 900
@@ -273,8 +295,6 @@
         &:hover
           background #032f11
         +below($tablet)
-          margin-right auto
-          margin-left auto
           width 400px
         +below($mobile)
           width 200px

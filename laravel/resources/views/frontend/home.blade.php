@@ -4,11 +4,15 @@
 
 <body>
   <section class="inicial">
-    <div class="banner">
+  <div class="banner">
       <img src="{{ asset('assets/img/layout/Logo_REGULARIZA_png01.png') }}" alt="Logo Regulariza Engenharia">
       <h1>{{ $home->titulo }}</h1>
       <h2>{{ $home->subtitulo }}</h2>
-      <a href="#"><div class="mainbutton"><p>Clique Aqui</p></div></a>
+      <div class="btn_link0">
+        <a href="#">
+          <div class="mainbutton"><p>Clique Aqui</p></div>
+        </a>
+      </div>
     </div>
 
     <!-- Start WOWSlider.com BODY section -->
@@ -39,7 +43,9 @@
       <div class="cardinfo">
         <h3>✔ {{ $servico->titulo }}</h3>
         <p>{{ $servico->paragrafo }}</p>
-        <a href="#"><div class="cardbutton"><h4>Contatar Agora<h4></div></a>
+        <div class="btn_ser">
+          <a href="#"><div class="cardbutton"><h4>Contatar Agora<h4></div></a>
+        </div>
       </div>
       <div class="cardimg"><img src="{{ asset('assets/img/servicos/'.$servico->imagem)}}" alt=""></div>
     </div>

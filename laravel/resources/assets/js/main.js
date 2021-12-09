@@ -134,15 +134,6 @@ function abrirBurger() {
 
 
 //EFFEITOS
-// const sons = document.getElementById("sons");
-
-// apagar.addEventListener('wait', efeitos)
-
-// function efeitos(){
-//     olam.classList.add("olam2");
-// }
-
-
 
 document.addEventListener("DOMContentLoaded", function(event) {
     document.addEventListener("scroll", function(event) {

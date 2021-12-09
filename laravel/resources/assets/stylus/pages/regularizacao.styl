@@ -50,6 +50,19 @@
   max-height 675px
   position absolute
   z-index 91
+  .btn_link0
+    width 317px
+    height 55px
+    margin-left 25%
+    margin-top 3%
+    +below($tablet)
+      margin-top 2%
+      margin-left auto
+      margin-right auto
+      width 250px
+      height 43px
+    a   
+      height 50px
   img
     max-width 252px
     height auto
@@ -105,12 +118,7 @@
     height 55px
     &:hover
       background #032f11
-    +below(1600px)
-      margin-top 48px
     +below($tablet)
-      margin-right auto
-      margin-left auto
-      margin-top 15px
       width 250px
       height 43px
       +below($mobile)
@@ -133,6 +141,8 @@
   width 100%
   display block
   padding 90px 0
+  +below($mobile)
+    padding 80px 0
   .white_box
     position relative
     background-color white
@@ -142,31 +152,64 @@
     width 690px
     margin-left 40%
     padding-top 50px
+    +below($tablet)
+      margin-left auto  
+      margin-right auto
+      padding-bottom 25px
+      position inherit
+    +below($mobile)
+      width 90%
+      height 100%
+    .btn_link
+      width 220px
+      display flex
+      margin-right auto
+      margin-left auto
+      a   
+        height 50px
     .imgtablet
       position absolute
       height auto
       width 377px
       left -300px
       top 60px
+      +below($tablet)
+        display none
       img
         width 100%
         height auto
     h2 
-      lato 32
+      muli 32
       font-weight 900
       padding 10px 110px
-    .p_par
-      muli 15
-      padding 10px 110px
-      font-weight 300
-      .verde
-        color #16A085
-        font-weight bold
-      .amarela
-        color #f1c40f
-        font-weight bold
+      +below($tablet)
+        padding 10px 40px
+        text-align center
+        margin-top -10px
+      +below($mobile)
+        muli 25
+        padding 10px 20px
+    .text_white
+      margin-bottom 30px
+      .p_par
+        muli 15
+        padding 10px 110px
+        font-weight 300
+        +below($tablet)
+          muli 18
+          padding 10px 50px
+          text-align center
+        +below($mobile)
+          muli 14
+          padding 10px 30px
+          text-align justify
+        .verde
+          color #16A085
+          font-weight bold
+        .amarela
+          color #f1c40f
+          font-weight bold
     .btn_regularizacao
-      margin-top 30px
       margin-left auto
       margin-right auto
       border-radius 4px
@@ -183,6 +226,20 @@
       letter-spacing 0.5px
       text-align center
       padding-top 13px
+  .tablet  
+    display none
+    +below($tablet)
+      display block
+      height auto
+      width 250px
+      margin-top -40px
+      margin-bottom 20px
+      margin-left auto
+      margin-right auto
+      img
+        width 100%
+        height auto
+
         
 // Beneficios
 
@@ -196,11 +253,22 @@
 
 .box_father
   padding-bottom 50px
+  .btn_link
+    display flex
+    justify-content center
+    a   
+      height 50px
   .box1
     display flex
     justify-content center
     column-gap 65px
     margin-bottom 65px
+    +below($tablet)
+      column-gap 30px
+      margin-bottom 35px
+    +below($mobile)
+      flex-wrap wrap
+      margin-bottom 0
     .box_sons
       border 2px solid rgba(59, 119, 32, 0.996)
       border-radius 9px
@@ -208,24 +276,48 @@
       width 470px
       height 490px
       text-align center
+      +below($tablet)
+        width 350px
+      +below($mobile)
+        margin-bottom 35px
+        width 260px
       .icon
         height 105px
         width auto
         padding 40px 0
+        +below($tablet)
+          padding-top 35px
+          padding-bottom 20px
+        +below($mobile)
+          height 70px
+          padding-bottom 5px
       h2 
         opens 26
         font-weight 600
         margin-bottom 25px
+      +below($mobile)
+          opens 30
+          margin-bottom 15px
       p
         muli 19
         font-weight 300
         padding 0 25px
+        +below($tablet)
+          muli 17
+        +below($mobile)
+          padding 0 15px
+          margin-bottom -5px
 
   .box2
     display flex
     justify-content center
     column-gap 65px
     margin-bottom 65px
+    +below($tablet)
+      column-gap 30px
+      margin-bottom 35px
+    +below($mobile)
+      flex-wrap wrap
     .box_sons
       border 2px solid rgba(59, 119, 32, 0.996)
       border-radius 9px
@@ -233,82 +325,217 @@
       width 470px
       height 490px
       text-align center
+      +below($tablet)
+        width 350px
+      +below($mobile)
+        margin-bottom 35px
+        width 260px
       .icon
         height 105px
         width auto
         padding 40px 0
+        +below($tablet)
+          padding-top 35px
+          padding-bottom 20px
+        +below($mobile)
+          height 70px
+          padding-bottom 5px
       h2 
         opens 26
         font-weight 600
         margin-bottom 25px
+        +below($mobile)
+          opens 30
+          margin-bottom 15px
       p
         muli 19
         font-weight 300
         padding 0 28px
+        +below($tablet)
+          muli 17
+        +below($mobile)
+          padding 0 15px
 
-  .btn_regularizacao
+  .btn_bene
+    border-radius 4px
+    background-color $verde
+    width 420px
+    height 50px
+    &:hover
+      background #032f11
+    +below($tablet)
+      width 420px
+    +below($mobile)
+      width 265px
+  .p_btn
+    muli 18
+    font-weight 900
+    color white
+    text-transform uppercase
+    letter-spacing 0.5px
+    text-align center
+    padding-top 13px
+    +below($tablet)
+      muli 21
+
+// CHAMADA-BOTTOM
+
+.imgcall
+  height 430px
+  width 100%
+  background-repeat no-repeat
+  background-size cover
+  h2
+    padding-top 103px
+    padding-left 300px
+    muli 37
+    font-weight 400
+    color white
+    +below($tablet)
+      display flex
+      justify-content center
+      padding-left 0
+      muli 30
+    +below($mobile)
+      muli 26
+      text-align center
+      padding-top 85px
+  h3
+    padding-left 300px
+    color white
+    lato 50
+    font-weight 900
+    +below($tablet)
+      display flex
+      justify-content center
+      padding-left 0
+      lato 46
+    +below($mobile)
+      lato 35
+      text-align center
+  .btn_btm
+    margin-top 60px
+    margin-left 300px
+    width 340px
+    +below($tablet)
+      width 420px
+      margin-right auto
+      margin-left auto
+    +below($mobile)
+        width 230px
+    .btn_call
+      border-radius 2px
+      background-color $verde
+      color white
+      width 340px
+      height 55px
+      &:hover
+        background #032f11
+      +below($tablet)
         margin-top 30px
-        margin-left auto
+        width 420px
         margin-right auto
-        border-radius 4px
-        background-color $verde
-        width 220px
-        height 50px
-        &:hover
-          background #032f11
-      .p_btn
-        muli 18
+        margin-left auto
+      +below($mobile)
+        width 230px
+      p
+        muli 19
         font-weight 900
-        color white
         text-transform uppercase
         letter-spacing 0.5px
         text-align center
         padding-top 13px
 
+// OPORTUNIDADE
 
-
-
-// Certificados
-
-// CHAMADA-BOTTOM
-
-.imgcall
-  position relative
-  z-index 1
-  .call_h2
-    position absolute
-    top 103px
-    left 224px
-    muli 37
-    font-weight 400
-    color white
-  .call_h3
-    position absolute
-    top 147px
-    left 224px
-    color white
-    lato 50
+.oportunidade
+  text-align center
+  h2
+    muli 38
     font-weight 900
-  .btn_call
-    position absolute
-    top 265px
-    left 224px
-    border-radius 2px
-    background-color $verde
-    color white
-    width 340px
-    height 55px
-    &:hover
-      background #032f11
-    p
-      muli 19
+    color #525e6a
+    padding-top 55px
+    +below($tablet)
+      muli 25
+    +below($mobile)
+      padding-left 10px
+      padding-right 10px
+  h4
+    montserrat 22
+    color #525e6a
+    padding-top 25px
+    +below($tablet)
+      montserrat 20
+  .gray_box
+    background-color #535f6b
+    height 840px
+    width 968px
+    margin-left auto
+    margin-right auto
+    border-radius 30px
+    margin-top 40px
+    +below($tablet)
+      width 716px
+    +below($mobile)
+      width 80%
+      height 90%
+    img
+      padding 1px
+      +below($mobile)
+        width 200px
+        height auto
+    h3
+      montserrat 24
+      color #fff
+      font-weight 700
+      padding-top 55px
+      padding-bottom 40px
+      +below($tablet)
+        montserrat 21
+        font-weight 900
+      +below($mobile)
+        padding-left 10px
+        padding-right 10px
+    h4
+      muli 35
       font-weight 900
-      text-transform uppercase
-      letter-spacing 0.5px
-      text-align center
-      padding-top 13px
-  img
-    width 100%
+      color #fff
+      padding-bottom 45px
+    h5
+      muli 30
+      font-weight 900
+      color #fff
+    .botao
+      display flex
+      justify-content center
+      padding 45px 0
+      img
+        width 56px
+        height auto
+        padding 30px 15px
+        +below($mobile)
+          display none
+      .btn_att
+        background-color #fda64a
+        width 370px
+        height 72px
+        border-radius 10px
+        +below($mobile)
+          width 210px
+          height 58px
+        p
+          muli 22
+          font-weight 900
+          color white
+          text-align center
+          padding-top 21px
+          +below($mobile)
+            padding-top 14px
+        
+        
+
+
+// CERTIFICADOS
 
 .cert_div
   background-color #f0f3f5
