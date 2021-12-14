@@ -1,0 +1,44 @@
+.contato
+  display flex
+  justify-content space-evenly
+  padding 50px 0
+  background-color #7da70e
+  +below($tablet)
+    flex-direction column
+  
+  .info
+    background-color #fff
+    border-radius 10px
+    max-height 749px
+    padding 30px 15px
+    text-align center
+    
+    h6 
+      lato 24
+      font-weight 900
+      vertical-align middle
+      margin 10px 0
+      +below($tablet)
+        lato 30
+        margin-top 40px
+      +below($mobile)
+        lato 18
+    p
+      muli 19
+      +below($tablet)
+        muli 19
+      +below($mobile)
+        muli 14
+    .contato-whatsapp
+      margin-bottom 30px
+        
+.mapa
+  margin-top 15px
+  width 650px
+  height 600px
+  +below($tablet)
+    width 100%
+    height 450px
+  +below($mobile)
+    width 100%
+    height 200px

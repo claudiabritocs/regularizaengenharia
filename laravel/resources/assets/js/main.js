@@ -156,3 +156,21 @@ function addClass(element, className) {
         element.className += " " + className;
     }
 }
+
+// AVISO DE COOKIES
+$(".aviso-cookies").show();
+
+$(".aceitar-cookies").click(function () {
+var url = window.location.origin + window.location.pathname +"/aceite-de-cookies";
+
+$.ajax({
+    type: "POST",
+    url: url,
+    success: function (data, textStatus, jqXHR) {
+    $(".aviso-cookies").hide();
+    },
+    error: function (jqXHR, textStatus, errorThrown) {
+    console.log(jqXHR, textStatus, errorThrown);
+    },
+    });
+});

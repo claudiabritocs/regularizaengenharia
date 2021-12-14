@@ -31,9 +31,9 @@ class RouteServiceProvider extends ServiceProvider
         $router->model('servicos', 'App\Models\Servicos');
         $router->model('contato', 'App\Models\Contato');
         $router->model('faq', 'App\Models\Faq');
+        $router->model('projetos', 'App\Models\Projetos');
         $router->model('certificados', 'App\Models\Certificados');
 		$router->model('configuracoes', 'App\Models\Configuracoes');
-        $router->model('recebidos', 'App\Models\ContatoRecebido');
         $router->model('usuarios', 'App\Models\User');
 
 

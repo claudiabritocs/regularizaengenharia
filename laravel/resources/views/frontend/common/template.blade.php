@@ -48,6 +48,14 @@
     @yield('content')
     @include('frontend.common.footer')
 
+<!-- AVISO DE COOKIES -->
+    @if(!isset($verificacao))
+    <div class="aviso-cookies">
+        <p class="frase-cookies">Usamos cookies para personalizar o conteúdo, acompanhar anúncios e oferecer uma experiência de navegação mais segura a você. Ao continuar navegando em nosso site você concorda com o uso dessas informações. Leia nossa <a href="{{ route('termos') }}" target="_blank" class="link-politica">Política de Privacidade</a> e saiba mais.</p>
+        <button class="aceitar-cookies">ACEITAR E FECHAR</button>
+    </div>
+    @endif
+
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 	<script>window.jQuery || document.write('<script src="{{ asset('assets/vendor/jquery/dist/jquery.min.js') }}"><\/script>')</script>
     <script src="{{ asset('assets/js/vendor.main.js') }}"></script>
@@ -57,6 +65,8 @@
     <script src="{{ asset('assets/vendor/masonry-layout/dist/masonry.pkgd.min.js') }}"></script>
     <script src="{{ asset('assets/js/main.js') }}"></script>
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+   
 
 @if($config->analytics)
     <script>

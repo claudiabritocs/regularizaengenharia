@@ -17,4 +17,7 @@
   <li @if(Tools::routeIs('painel.faq*')) class="active" @endif>
     <a href="{{ route('painel.faq.index') }}">FAQ</a>
   </li>
+  <li>
+    <a href="{{ url('/') }}">Website</a>
+  </li>
 </ul>

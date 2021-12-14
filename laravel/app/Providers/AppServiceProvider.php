@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use App\Models\AceiteDeCookies;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -19,11 +20,11 @@ class AppServiceProvider extends ServiceProvider
 
         view()->composer('frontend.*', function($view) {
             $view->with('contato', \App\Models\Contato::first());
+
+            $request = app(\Illuminate\Http\Request::class);
+            $view->with('verificacao', AceiteDeCookies::where('ip', $request->ip())->first());
         });
 
-        view()->composer('painel.common.nav', function($view) {
-            $view->with('contatosNaoLidos', \App\Models\ContatoRecebido::naoLidos()->count());
-        });
     }
 
     /**

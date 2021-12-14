@@ -8,6 +8,9 @@ use App\Models\Contato;
 use App\Models\Servicos;
 use App\Models\Principal;
 use App\Models\Certificados;
+use App\Models\AceiteDeCookies;
+
+use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
@@ -21,5 +24,15 @@ class HomeController extends Controller
             'certificados' => Certificados::ordenados()->get(),
             'faq' => Faq::ordenados()->get(),
         ]);
+    }
+
+    public function postCookies(Request $request)
+    {
+        $input = $request->all();
+        $input['ip'] = $request->ip();
+
+        AceiteDeCookies::create($input);
+
+        return redirect('/');
     }
 }

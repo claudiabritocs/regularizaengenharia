@@ -26,6 +26,9 @@
                         <li @if(Tools::routeIs('painel.usuarios*')) class="active" @endif>
                             <a href="{{ route('painel.usuarios.index') }}">Usuários</a>
                         </li>
+                        <li @if(Tools::routeIs('painel.aceite-de-cookies*')) class="active" @endif>
+                            <a href="{{ route('painel.aceite-de-cookies') }}">Relatório de Cookies</a>
+                        </li>
                         <li><a href="{{ route('logout') }}">Logout</a></li>
                     </ul>
                 </li>

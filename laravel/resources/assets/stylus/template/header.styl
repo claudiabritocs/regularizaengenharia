@@ -23,6 +23,14 @@
                 display: flex
                 column-gap: 10px
                 position: relative
+                #termos
+                    montserrat 15 bold
+                    list-style none
+                    padding 8px
+                    cursor pointer
+                    &:hover
+                        background: #bdcbbf
+                        border-radius: 5px  
                 a
                     montserrat 15 bold
                     list-style: none
@@ -93,7 +101,59 @@
             +above(1260px)
                 display: none
 
-
-
+.aviso-cookies
+    display flex
+    width 100%
+    margin 0
+    flex-direction row
+    align-items center
+    justify-content center
+    bottom 0
+    background-color rgba(0, 0, 0, 0.8)
+    position fixed
+    z-index 999
+    padding 30px
+    +mobile()
+        flex-direction column
+        align-items center
+        padding 20px 
+    .frase-cookies
+        width 65%
+        notosans(14)
+        color #FFF
+        margin 0
+        .link-politica
+            text-decoration underline
+            &:hover
+            &:focus
+                font-weight bold
+        +below($tablet)
+            font-size 12px
+        +mobile()
+            width 100%
+            text-align center
+    .aceitar-cookies
+        width 15%
+        height 40px
+        notosans(14)
+        color #FFF
+        background-color transparent 
+        border 1px solid #FFF
+        border-radius 0
+        margin-left 30px
+        cursor pointer
+        outline none
+        &:hover
+        &:focus
+            border 1px solid $tomate
+            background-color $tomate
+        +below($tablet)
+            font-size 12px
+            height 30px
+        +mobile()
+            width 100%
+            text-align center
+            margin-left 0
+            margin-top 10px
 
 
