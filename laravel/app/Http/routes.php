@@ -6,8 +6,13 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('contato', 'ContatoController@index')->name('contato');
     Route::get('termos', 'TermosController@index')->name('termos');
     Route::post('aceite-de-cookies', 'HomeController@postCookies')->name('aceite-de-cookies.post');
-    
-    
+    // Route::get('projetos/{categoria_slug?}', 'ProjetosController@index')->name('projetos');
+    // Route::get('projetos/{categoria_slug}/{projeto_slug}', 'ProjetosController@show')->name('projetos.show');
+    Route::get('projetos', 'ProjetosController@index')->name('projetos');
+    Route::get('projetos/{slug}', 'ProjetosController@show')->name('projetos.show');
+    Route::get('projetos/{slug}/ajax', 'ProjetosController@getShowDados')->name('projetos.getShowDados'); // ajax
+
+
     // Painel
     Route::group([
         'prefix'     => 'painel',
@@ -23,13 +28,16 @@ Route::group(['middleware' => ['web']], function () {
         Route::resource('servicos', 'ServicosController');
         Route::resource('contato', 'ContatoController');
         Route::resource('faq', 'FaqController');
-        Route::resource('projetos', 'ProjetosController');
         Route::resource('certificados', 'CertificadosController');
 		Route::resource('configuracoes', 'ConfiguracoesController', ['only' => ['index', 'update']]);
         Route::get('aceite-de-cookies', 'AceiteDeCookiesController@index')->name('painel.aceite-de-cookies');
 
         Route::resource('usuarios', 'UsuariosController');
 
+        Route::resource('projetos', 'ProjetosController');
+        Route::get('projetos/{projeto}/imagens/clear', 'ProjetosImagensController@clear')->name('projetos.imagens.clear');
+        Route::resource('projetos.imagens', 'ProjetosImagensController');		
+  
         Route::post('ckeditor-upload', 'PainelController@imageUpload');
         Route::post('order', 'PainelController@order');
         Route::get('logs', '\Rap2hpoutre\LaravelLogViewer\LogViewerController@index');

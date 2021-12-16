@@ -8,7 +8,7 @@
             <ul>
                 <a href="{{ route('home') }}"><li>Home</li></a>
                 <a href="{{ route('regularizacao') }}"><li>Regularização</li></a>
-                <a href="#"><li>Serviços</li></a>
+                <a href="{{ route('projetos') }}"><li>Projetos</li></a>
                 <a href="{{ route('contato') }}"><li>Contato</li></a>
                 <div id="termos"><li>Termos ▼</li></div>
                 <div class="dropdown-content" id="dropdown-content">
@@ -26,7 +26,7 @@
             <ul>
                 <a href="{{ route('home') }}"><li>Home</li></a>
                 <a href="{{ route('regularizacao') }}"><li>Regularização</li></a>
-                <a href="#"><li>Serviços</li></a>
+                <a href="{{ route('projetos') }}"><li>Projetos</li></a>
                 <a href="{{ route('contato') }}"><li>Contato</li></a>
                 <a href="{{ route('termos') }}"><li>Termos</li></a>
             </ul>

@@ -2,83 +2,85 @@
 
 namespace App\Http\Controllers\Painel;
 
-use Illuminate\Http\Request;
-
-use App\Http\Requests\ProjetosRequest;
-use App\Http\Requests\ProjetosEditRequest;
 use App\Http\Controllers\Controller;
-
-use App\Models\Projetos;
+use App\Http\Requests\ProjetosRequest;
+use App\Models\Projeto;
+use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class ProjetosController extends Controller
 {
     public function index()
     {
-        $registro = Projetos::ordenados()->get();
+        $projetos = Projeto::ordenados()->get();
+        $cores = ['#000' => 'Preto', '#FFF' => 'Branco'];
 
-        return view('painel.servicos.index', compact('registro'));
+        return view('painel.projetos.index', compact('projetos', 'cores'));
     }
 
     public function create()
     {
-        return view('painel.servicos.create');
+        $cores = ['#000' => 'Preto', '#FFF' => 'Branco'];
+
+        return view('painel.projetos.create', compact('cores'));
     }
 
     public function store(ProjetosRequest $request)
     {
         try {
-
             $input = $request->all();
 
-            if (isset($input['imagem'])) $input['imagem'] = Projetos::upload_imagem();
+            $input['slug_pt'] = Str::slug($request->titulo_pt, "-");
+            if (isset($input['titulo_en'])) $input['slug_en'] = Str::slug($request->titulo_en, "-");
+            if (isset($input['titulo_es'])) $input['slug_es'] = Str::slug($request->titulo_es, "-");
 
-            Projetos::create($input);
+            if (isset($input['capa'])) $input['capa'] = Projeto::upload_capa();
 
-            return redirect()->route('painel.projetos.index')->with('success', 'Projeto adicionado com sucesso.');
+            Projeto::create($input);
 
+            return redirect()->route('painel.projetos.index')->with('success', 'Registro adicionado com sucesso.');
         } catch (\Exception $e) {
 
-            return back()->withErrors(['Erro ao adicionar o projeto: '.$e->getMessage()]);
-
+            return back()->withErrors(['Erro ao alterar registro: ' . $e->getMessage()]);
         }
     }
 
-    public function edit(Projetos $registro)
+    public function edit(Projeto $projeto)
     {
-        return view('painel.projetos.edit', compact('registro'));
+        $cores = ['#000' => 'Preto', '#FFF' => 'Branco'];
+
+        return view('painel.projetos.edit', compact('projeto', 'cores'));
     }
 
-    public function update(ProjetosEditRequest $request, Projetos $registro)
+    public function update(ProjetosRequest $request, Projeto $projeto)
     {
         try {
-
             $input = $request->all();
 
-            if (isset($input['imagem'])) $input['imagem'] = Projetos::upload_imagem();
+            $input['slug_pt'] = Str::slug($request->titulo_pt, "-");
+            if (isset($input['titulo_en'])) $input['slug_en'] = Str::slug($request->titulo_en, "-");
+            if (isset($input['titulo_es'])) $input['slug_es'] = Str::slug($request->titulo_es, "-");
 
-            $registro->update($input);
+            if (isset($input['capa'])) $input['capa'] = Projeto::upload_capa();
 
-            return redirect()->route('painel.projetos.index')->with('success', 'Projeto alterado com sucesso.');
+            $projeto->update($input);
 
+            return redirect()->route('painel.projetos.index')->with('success', 'Registro alterado com sucesso.');
         } catch (\Exception $e) {
 
-            return back()->withErrors(['Erro ao alterar o projeto: '.$e->getMessage()]);
-
+            return back()->withErrors(['Erro ao alterar registro: ' . $e->getMessage()]);
         }
     }
 
-    public function destroy(Projetos $registro)
+    public function destroy(Projeto $projeto)
     {
         try {
+            $projeto->delete();
 
-            $registro->delete();
-
-            return redirect()->route('painel.projetos.index')->with('success', 'Projeto excluído com sucesso.');
-
+            return redirect()->route('painel.projetos.index')->with('success', 'Registro excluído com sucesso.');
         } catch (\Exception $e) {
 
-            return back()->withErrors(['Erro ao excluir o projeto: '.$e->getMessage()]);
-
+            return back()->withErrors(['Erro ao excluir registro: ' . $e->getMessage()]);
         }
     }
 }

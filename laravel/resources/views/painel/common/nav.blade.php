@@ -8,6 +8,9 @@
   <li @if(Tools::routeIs('painel.servicos*')) class="active" @endif>
     <a href="{{ route('painel.servicos.index') }}">Serviços</a>
   </li>
+  <li @if(Tools::routeIs('painel.projetos*')) class="active" @endif>
+    <a href="{{ route('painel.projetos.index') }}">Projetos</a>
+  </li>
   <li @if(Tools::routeIs('painel.certificados*')) class="active" @endif>
     <a href="{{ route('painel.certificados.index') }}">Certificados</a>
   </li>
