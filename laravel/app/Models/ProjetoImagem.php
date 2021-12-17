@@ -3,7 +3,6 @@
 namespace App\Models;
 
 use App\Helpers\CropImage;
-use App\Helpers\CropImageTinify;
 use Illuminate\Database\Eloquent\Model;
 
 class ProjetoImagem extends Model

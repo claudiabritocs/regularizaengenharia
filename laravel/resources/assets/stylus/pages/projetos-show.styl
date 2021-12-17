@@ -1,19 +1,51 @@
 .projetos-show
-  background-color #506e04
+  padding-bottom 50px
+  background-color rgb(224, 224, 224)
+
   .center
     text-align center
+    background-color rgb(224, 224, 224)
     img  
+      max-width 75%
       margin 5px
       height 75%
       border 2px solid white
 
-.btn_back
-  background-color white
-  margin-top 30px
-  border-radius 4px
-  color #506e04
+.btn
   width 211px
   height 46px
+  margin-left auto
+  margin-right auto
+  .btn_back
+    cursor pointer
+    margin-top 30px
+    border-radius 4px
+    background-color $verde
+    color white
+    width 211px
+    height 46px
+    margin-left auto
+    margin-right auto
+    &:hover
+      background #032f11
+    +below($tablet)
+      width 400px
+    +below($mobile)
+      width 200px
+    h4
+      lato 20
+      font-weight 900
+      letter-spacing 0.5px
+      padding 10px 0
+      text-align center
+      &:hover
+        color white
+      +below($tablet)
+        text-align center
+      +below($mobile)
+        lato 18
+  
+   
 
         
 

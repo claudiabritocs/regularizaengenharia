@@ -13,9 +13,11 @@
         @endforeach
 
     </div>
-
-    <a href="{{ route('projetos') }}" class="btn_back">Voltar</a>
     
+    <div class="btn">
+        <a href="{{ route('projetos') }}"><div class="btn_back"><h4>VOLTAR</h4></div></a>
+    </div>
+
 </main>
 
 @endsection

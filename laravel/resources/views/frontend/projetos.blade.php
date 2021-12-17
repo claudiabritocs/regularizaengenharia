@@ -19,7 +19,12 @@
                 </div>
                 <div class="card_text">
                     <h1>{{$projeto->titulo_pt}}</h1>
-                    <p>{{$projeto->descritivo_pt}}</p>
+                    <p class="end">{{ str_replace(array("<p>", "</p>", "<br />"),'', $projeto->descritivo_pt) }}</p>
+                </div>
+            </a>
+            <a href="{{ route('projetos.show', $projeto->slug_pt) }}">
+                <div class="see_glr">
+                    <p>Clique aqui para ver mais</p>
                 </div>
             </a>
         </div>

@@ -6,8 +6,8 @@
         <h2><small>Projetos /</small> Editar Projeto</h2>
     </legend>
 
-    {!! Form::model($registro, [
-        'route'  => ['painel.projetos.update', $registro->id],
+    {!! Form::model($projeto, [
+        'route'  => ['painel.projetos.update', $projeto->id],
         'method' => 'patch',
         'files'  => true])
     !!}

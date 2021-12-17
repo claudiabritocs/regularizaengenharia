@@ -36,7 +36,7 @@ Route::group(['middleware' => ['web']], function () {
 
         Route::resource('projetos', 'ProjetosController');
         Route::get('projetos/{projeto}/imagens/clear', 'ProjetosImagensController@clear')->name('projetos.imagens.clear');
-        Route::resource('projetos.imagens', 'ProjetosImagensController');		
+        Route::resource('projetos.imagens', 'ProjetosImagensController', ['parameters' => ['imagens' => 'imagens_projetos']]);	
   
         Route::post('ckeditor-upload', 'PainelController@imageUpload');
         Route::post('order', 'PainelController@order');

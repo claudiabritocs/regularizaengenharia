@@ -24,7 +24,7 @@ class RouteServiceProvider extends ServiceProvider
      */
     public function boot(Router $router)
     {
-		$router->model('imagens', 'App\Models\Imagem');
+		
 		$router->model('home', 'App\Models\Home');
         $router->model('principal', 'App\Models\Principal');
         $router->model('banners', 'App\Models\Banners');
@@ -32,7 +32,7 @@ class RouteServiceProvider extends ServiceProvider
         $router->model('contato', 'App\Models\Contato');
         $router->model('faq', 'App\Models\Faq');
         $router->model('projetos', 'App\Models\Projeto');
-		$router->model('projetos_imagens', 'App\Models\ProjetoImagem');
+		$router->model('imagens_projetos', 'App\Models\ProjetoImagem');
         $router->model('certificados', 'App\Models\Certificados');
 		$router->model('configuracoes', 'App\Models\Configuracoes');
         $router->model('usuarios', 'App\Models\User');

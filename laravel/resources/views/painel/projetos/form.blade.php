@@ -10,7 +10,7 @@
 <div class="well form-group">
     {!! Form::label('capa', 'Capa') !!}
 @if($submitText == 'Alterar')
-    <img src="{{ url('assets/img/projetos/'.$projetos->capa) }}" style="display:block; margin-bottom: 10px; max-width: 100%;">
+    <img src="{{ url('assets/img/projetos/'.$projeto->capa) }}" style="display:block; margin-bottom: 10px; max-width: 100%;">
 @endif
     {!! Form::file('capa', ['class' => 'form-control']) !!}
 </div>

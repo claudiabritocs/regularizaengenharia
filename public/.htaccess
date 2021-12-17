@@ -1,9 +1,9 @@
-AddHandler php56-script .php
-suPHP_ConfigPath /home/trupe1/php56/
+# AddHandler php56-script .php
+# suPHP_ConfigPath /home/trupe1/php56/
 
-# <IfModule mime_module>
-# AddHandler application/x-httpd-ea-php56 .php .php5 .phtml
-# </IfModule>
+<IfModule mime_module>
+AddHandler application/x-httpd-ea-php56 .php .php5 .phtml
+</IfModule>
 
 <IfModule mod_rewrite.c>
     <IfModule mod_negotiation.c>

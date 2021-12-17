@@ -66,6 +66,7 @@
     <script src="{{ asset('assets/js/main.js') }}"></script>
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
     <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+    <script src="https://use.fontawesome.com/97f1ad84ed.js"></script>
    
 
 @if($config->analytics)
