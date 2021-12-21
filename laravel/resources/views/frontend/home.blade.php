@@ -9,9 +9,7 @@
       <h1>{{ $home->titulo }}</h1>
       <h2>{{ $home->subtitulo }}</h2>
       <div class="btn_link0">
-        <a href="#">
-          <div class="mainbutton"><p>Clique Aqui</p></div>
-        </a>
+        <div class="mainbutton" id="btn-Whats"><p>Clique Aqui</p></div>
       </div>
     </div>
 
@@ -31,18 +29,37 @@
     <!-- End WOWSlider.com BODY section -->
   </section>
 
+  <div class="whatsbox" id="whatsbox" style="display: none;">
+    
+    <div class="thebox">
+      <i class="fa fa-times" id="fa-times" aria-hidden="true"></i>
+      
+      <a href="https://api.whatsapp.com/send?phone=5511998770821&text=Ol%C3%A1!%20Gostaria%20de%20tirar%20uma%20d%C3%BAvida!" target="_blank">
+        <div class="each">
+          <img src="{{ asset('assets/img/layout/whatsicon.png')}}" alt="ícone whatsappp">
+          <p>Nicolas</p>
+        </div>
+      </a>
+
+      <a href="https://api.whatsapp.com/send?phone=5511997459364&text=Ol%C3%A1!%20Gostaria%20de%20tirar%20uma%20d%C3%BAvida!" target="_blank">
+        <div class="each">
+          <img src="{{ asset('assets/img/layout/whatsicon.png')}}" alt="ícone whatsappp">
+          <p>Bruno</p>
+        </div>
+      </a>
+    </div>
+  </div>
+
   <div class="hidden_call">
     <h1>{{ $home->titulo }}</h1>
     <h2>{{ $home->subtitulo }}</h2>
-    <a href="#"><div class="mainbutton"><p>Clique Aqui</p></div></a>
+    <div class="mainbutton" id="btn-Whats2"><p>Clique Aqui</p></div>
   </div>
 
   <div class="arrow1">
     <i class="fa fa-angle-double-down"  aria-hidden="true"></i>
   </div>
   
-
-
   <section class="cards-father">
     @foreach ($servicos as $servico)
     <div class="cards-sons" id="sons">
@@ -50,7 +67,9 @@
         <h3>✔ {{ $servico->titulo }}</h3>
         <p>{{ $servico->paragrafo }}</p>
         <div class="btn_ser">
-          <a href="#"><div class="cardbutton"><h4>Contatar Agora<h4></div></a>
+          <a href="https://api.whatsapp.com/send?phone=5511998770821&text=Ol%C3%A1!%20Gostaria%20de%20tirar%20uma%20d%C3%BAvida!" target="_blank">
+            <div class="cardbutton"><h4>Contatar Agora<h4></div>
+          </a>
         </div>
       </div>
       <div class="cardimg"><img src="{{ asset('assets/img/servicos/'.$servico->imagem)}}" alt=""></div>

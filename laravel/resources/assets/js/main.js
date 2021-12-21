@@ -157,6 +157,30 @@ function addClass(element, className) {
     }
 }
 
+// Whatsapp Btns
+
+function whatsWin() {
+    var whatschoose = document.getElementById("whatsbox");
+    console.log("Chegou 1 step");
+    if(whatschoose.style.display == "none") {
+        whatschoose.style.display = "block";
+    } else if (whatschoose.style.display == "block") {
+        whatschoose.style.display = "none";
+    } else {
+        whatschoose.style.display = "block";
+    }
+}
+
+
+var whatsButton = document.getElementById("btn-Whats");
+whatsButton.addEventListener("click", whatsWin, false);
+
+var whatsButton2 = document.getElementById("btn-Whats2");
+whatsButton2.addEventListener("click", whatsWin, false);
+
+var whatsButtonClose = document.getElementById("fa-times");
+whatsButtonClose.addEventListener("click", whatsWin, true);
+
 // AVISO DE COOKIES
 $(".aviso-cookies").show();
 
