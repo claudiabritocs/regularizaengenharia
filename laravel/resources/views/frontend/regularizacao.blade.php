@@ -9,9 +9,7 @@
       <h1>{{ $home->titulo }}</h1>
       <h2>{{ $home->subtitulo }}</h2>
       <div class="btn_link0">
-        <a href="#">
-          <div class="mainbutton"><p>Clique Aqui</p></div>
-        </a>
+        <div class="mainbutton" id="btn-Whats"><p>Clique Aqui</p></div>
       </div>
     </div>
 
@@ -31,10 +29,31 @@
     <!-- End WOWSlider.com BODY section -->
   </section>
 
+  <div class="whatsbox" id="whatsbox" style="display: none;">
+    
+    <div class="thebox">
+      <i class="fa fa-times" id="fa-times" aria-hidden="true"></i>
+      
+      <a href="https://api.whatsapp.com/send?phone=5511998770821&text=Ol%C3%A1!%20Gostaria%20de%20tirar%20uma%20d%C3%BAvida!" target="_blank">
+        <div class="each">
+          <img src="{{ asset('assets/img/layout/whatsicon.png')}}" alt="ícone whatsappp">
+          <p>Nicolas</p>
+        </div>
+      </a>
+
+      <a href="https://api.whatsapp.com/send?phone=5511997459364&text=Ol%C3%A1!%20Gostaria%20de%20tirar%20uma%20d%C3%BAvida!" target="_blank">
+        <div class="each">
+          <img src="{{ asset('assets/img/layout/whatsicon.png')}}" alt="ícone whatsappp">
+          <p>Bruno</p>
+        </div>
+      </a>
+    </div>
+  </div>
+
   <div class="hidden_call">
     <h1>{{ $home->titulo }}</h1>
     <h2>{{ $home->subtitulo }}</h2>
-    <a href="#"><div class="mainbutton"><p>Clique Aqui</p></div></a>
+    <div class="mainbutton" id="btn-Whats2"><p>Clique Aqui</p></div>
   </div>
 
   <section class="the_call">
@@ -56,7 +75,7 @@
           </p>
         </div>
         <div class="btn_link">
-          <a href="#">
+        <a href="https://api.whatsapp.com/send?phone=5511998770821&text=Ol%C3%A1!%20Gostaria%20de%20tirar%20uma%20d%C3%BAvida!" target="_blank">
             <div class="btn_regularizacao"><p class="p_btn">Falar Comigo</p></div>
           </a>
         </div>
@@ -109,7 +128,7 @@
         </div>
       </div>
       <div class="btn_link">
-        <a href="#">
+      <a href="https://api.whatsapp.com/send?phone=5511998770821&text=Ol%C3%A1!%20Gostaria%20de%20tirar%20uma%20d%C3%BAvida!" target="_blank">
           <div class="btn_bene"><p class="p_btn">CLIQUE AQUI</p></div>
         </a>
       </div>
@@ -121,7 +140,7 @@
       <h2>Está precisando tirar uma Dúvida?</h2>
       <h3>Fale com a gente Agora!</h3>
       <div class="btn_btm">
-        <a href="#"><div class="btn_call"><p>CLIQUE AQUI</p></div></a>
+      <a href="https://api.whatsapp.com/send?phone=5511998770821&text=Ol%C3%A1!%20Gostaria%20de%20tirar%20uma%20d%C3%BAvida!" target="_blank"><div class="btn_call"><p>CLIQUE AQUI</p></div></a>
       </div>
     </div>
   </section>
@@ -137,7 +156,7 @@
       <h5>Aproveite a chance!</h5>
       <div class="botao">
         <img class="arrow" src="{{ asset('assets/img/layout/icon-arrow.png')}}" alt="uma seta curvada apontando para o botão">
-        <a href="#"><div class="btn_att"><p>CLIQUE AQUI</p></div></a>
+        <a href="https://api.whatsapp.com/send?phone=5511998770821&text=Ol%C3%A1!%20Gostaria%20de%20tirar%20uma%20d%C3%BAvida!" target="_blank"><div class="btn_att"><p>CLIQUE AQUI</p></div></a>
       </div>
     </div>
   </section>

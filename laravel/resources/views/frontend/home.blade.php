@@ -4,7 +4,7 @@
 
 <body>
   <section class="inicial">
-  <div class="banner">
+    <div class="banner">
       <img src="{{ asset('assets/img/layout/Logo_REGULARIZA_png01.png') }}" alt="Logo Regulariza Engenharia">
       <h1>{{ $home->titulo }}</h1>
       <h2>{{ $home->subtitulo }}</h2>
